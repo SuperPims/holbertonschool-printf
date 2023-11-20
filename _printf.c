@@ -9,37 +9,41 @@
 
 int _printf(const char *format, ...)
 {
-    format_list formats[] = {
-        {'c', print_char},
-        {'s', print_string},
-        {'%', print_modulo},
-        {'i', printi_int},
-        {'d', printd_int},
-        {'\0', NULL}};
+	if (format == NULL)
+		return (NULL);
 
-    int i = 0, j = 0;
-    va_list formatlist;
+	format_list formats[] = {
+		{'c', print_char},
+		{'s', print_string},
+		{'%', print_modulo},
+		{'i', printi_int},
+		{'d', printd_int},
+		{'\0', NULL}};
 
-    va_start(formatlist, format);
-    while (format != NULL && format[i] != '\0')
-    {
-        j = 0;
-        if (format[i] == '%')
-        {
-            while (formats[j].charac != '\0')
-            {
-                if (format[i] == formats[j].charac)
-                {
-                    formats[j].func(formatlist);
-                }
-                j++;
-            }
-        }
-        else
-        {
-            putchar(format[i]);
-        }
-        i++;
-    }
-    return (0); /*temporary*/
+	int i = 0, j = 0;
+	va_list formatlist;
+
+	va_start(formatlist, format);
+	while (format != NULL && format[i] != '\0')
+	{
+		j = 0;
+		if (format[i] == '%')
+		{
+			while (formats[j].charac != '\0')
+			{
+				if (format[i] == formats[j].charac)
+				{
+					formats[j].func(formatlist);
+				}
+				j++;
+			}
+		}
+		else
+		{
+			putchar(format[i]);
+		}
+		i++;
+	}
+	va_end(formatlist);
+	return (0); /*temporary*/
 }
