@@ -1,7 +1,7 @@
 #include "main.h"
 
 /*define the printf_putchar function*/
-int print_char(char c)
+int printd_int(int c)
 {
 return 0;
 }    
