@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 int printd_int(va_list args)
 {
@@ -30,7 +31,7 @@ int printd_int(va_list args)
 		i++;
 	}
 	
-	free(intstring)
+	free(intstring);
 	
 	return (intlength);
 }
