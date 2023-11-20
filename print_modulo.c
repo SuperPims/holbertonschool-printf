@@ -3,5 +3,7 @@
 /*define the printf_putchar function*/
 int print_modulo(va_list args)
 {
-return 0;
-}    
+	int percent = va_arg(args, int);
+	puts(percent);
+	return (sterlen(percent) + 1);
+}
