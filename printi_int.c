@@ -1,7 +1,8 @@
 #include "main.h"
 
-/*define the printf_putchar function*/
-int printi_int(int c)
+int printi_int(va_list args)
 {
-return 0;
-}    
+	int inti = va_arg(args, int);
+	puts(inti);
+	return (strlen(inti + 1));
+}
