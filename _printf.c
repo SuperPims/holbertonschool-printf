@@ -47,3 +47,4 @@ int _printf(const char *format, ...)
 	va_end(formatlist);
 	return (0); /*temporary*/
 }
+
