@@ -36,24 +36,4 @@ int _printf(const char *format, ...)
     i++;
     }
 }
-/*use _printf with print_char using putchar*/
-int print_char(va_list args)
-{
-    putchar(c);
-    return (0);
-}
-
-/*use _printf with print_string using puts*/
-int print_string(va_list args)
-{
-    puts(str);
-    return (0);
-}
-
-/*use _printf with print_modulo using puts*/
-int print_modulo(va_list args)
-{
-    puts(str);
-    return (0);
-}
 
