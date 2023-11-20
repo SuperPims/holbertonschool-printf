@@ -15,8 +15,7 @@ int _printf(const char *format, ...)
         {'%', print_modulo},
         {'i', printi_int},
         {'d', printd_int},
-        {'\0', NULL}
-    };
+        {'\0', NULL}};
 
     int i = 0, j = 0;
     va_list formatlist;
@@ -41,6 +40,6 @@ int _printf(const char *format, ...)
             putchar(format[i]);
         }
         i++;
-        return (0) /*temporary*/
+        return (0); /*temporary*/
     }
 }
