@@ -10,7 +10,7 @@
 typedef struct formats
 {
 	char charac;
-	void (*func)(va_list);
+	int (*func)(va_list);
 } format_list;
 
 /*fonction _printf*/
@@ -23,4 +23,4 @@ int print_modulo(va_list args);
 int printd_int(va_list args);
 int printi_int(va_list args);
 
-#endif // !MAIN_H
+#endif
