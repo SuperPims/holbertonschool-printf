@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
         {'\0', NULL}
     };
 
-    int i = 0, j = 0;
+    int i = 0, /*j = 0*/;
     va_list formatlist;
 
     va_start(formatlist, format);
@@ -35,4 +35,5 @@ int _printf(const char *format, ...)
         }
     i++;
     }
+    return (formats); /*temporary*/
 }
