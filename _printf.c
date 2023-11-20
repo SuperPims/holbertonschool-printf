@@ -13,8 +13,8 @@ int _printf(const char *format, ...)
         {'c', print_char},
         {'s', print_string},
         {'%', print_modulo},
-        {'i', print_int},
-        {'d', print_int},
+        {'i', printi_int},
+        {'d', printd_int},
         {'\0', NULL}
     };
 
