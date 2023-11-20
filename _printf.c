@@ -17,6 +17,24 @@ int _printf(const char *format, ...)
         {'d', print_int},
         {'\0', NULL}
     };
+
+    int i = 0, j = 0;
+    va_list formatlist;
+
+    va_start(formatlist, format);
+    while (format != NULL && format[i] != '\0')
+    {
+        if (format[i] == '%')
+        {
+            return(1); /*temporary*/
+        }
+        else
+        {
+            putchar(format[i]);
+     
+        }
+    i++;
+    }
 }
 /*use _printf with print_char using putchar*/
 int print_char(va_list args)
