@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
     int i = 0, j = 0;
     va_list formatlist;
 
-    va_start(formatlist, format);*/
+    va_start(formatlist, format);
     while (format != NULL && format[i] != '\0')
     {
         j = 0;
