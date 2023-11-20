@@ -18,10 +18,10 @@ int _printf(const char *format, ...)
         {'\0', NULL}
     };
 
-    int i = 0, /*j = 0*/;
-    va_list formatlist;
+    int i = 0/*, j = 0*/;
+    /*va_list formatlist;
 
-    va_start(formatlist, format);
+    va_start(formatlist, format);*/
     while (format != NULL && format[i] != '\0')
     {
         if (format[i] == '%')
@@ -35,5 +35,5 @@ int _printf(const char *format, ...)
         }
     i++;
     }
-    return (formats); /*temporary*/
+    return (0); /*temporary*/
 }
