@@ -3,5 +3,5 @@
 /*define the printf_putchar function*/
 void printf_putchar(char c)
 {
-    USART_SendData
-}
+    
+}    
