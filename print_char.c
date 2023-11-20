@@ -3,7 +3,7 @@
 /*define the printf_putchar function*/
 int print_char(va_list args)
 {
-	char c = va_arg(args, int);
+	char c = va_arg(args, char);
 	putchar(c);
 	return (strlen(c) + 1);
 }
