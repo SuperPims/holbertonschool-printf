@@ -12,6 +12,9 @@ int _printf(const char *format, ...)
     format_list formats[] = {
         {'c', print_char},
         {'s', print_string},
+        {'%', print_modulo},
+        {'i', print_int},
+        {'d', print_int},
         {'\0', NULL}
     };
 }
