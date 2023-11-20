@@ -9,5 +9,9 @@
 
 int _printf(const char *format, ...)
 {
-    
+    format_list formats[] = {
+        {'c', print_char},
+        {'s', print_string}
+        {'\0', NULL}
+    };
 }
