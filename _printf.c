@@ -9,8 +9,6 @@
 
 int _printf(const char *format, ...)
 {
-	if (format == NULL)
-		return (0);
 
 	format_list formats[] = {
 		{'c', print_char},
@@ -20,6 +18,9 @@ int _printf(const char *format, ...)
 		{'d', printd_int},
 		{'\0', NULL}};
 
+	if (format == NULL)
+		return (0);
+		
 	int i = 0, j = 0;
 	va_list formatlist;
 
