@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	if (format == NULL)
-		return (NULL);
+		return (-1);
 
 	format_list formats[] = {
 		{'c', print_char},
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		{
 			while (formats[j].charac != '\0')
 			{
-				if (format[i] == formats[j].charac)
+				if (format[i+1] == formats[j].charac)
 				{
 					formats[j].func(formatlist);
 				}
