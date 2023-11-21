@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	
+
 	va_start(formatlist, format);
 	while (format != NULL && format[i] != '\0')
 	{
@@ -33,13 +33,18 @@ int _printf(const char *format, ...)
 		{
 			while (formats[j].charac != '\0')
 			{
-				if (format[i+1] == formats[j].charac)
+				if (format[i + 1] == formats[j].charac)
 				{
 					nbrprint = formats[j].func(formatlist);
 					i++;
 				}
 				j++;
 			}
+			if (formats[j].charac == '\0')
+			{
+				putchar('%');
+			}
+			i++;
 		}
 		else
 		{
@@ -51,4 +56,3 @@ int _printf(const char *format, ...)
 	va_end(formatlist);
 	return (nbrprint);
 }
-
