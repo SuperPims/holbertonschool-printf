@@ -8,7 +8,7 @@
 #include <stdarg.h>
 
 /**
- * struc formats - struct that store differents format
+ * struct formats - struct that store differents format
  * that _printf can print and their respectives function
  *
  * @charac: the char that tells wich type is to be printed
