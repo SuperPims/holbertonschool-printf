@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 char *_itoai(int num, char str[], int base)
 {

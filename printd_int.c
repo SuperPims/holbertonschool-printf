@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 char *_itoa(int num, char str[], int base)
 {
