@@ -23,7 +23,7 @@ char *_itoa(int num, char str[], int base)
 	str[i] = '\0';
 	end = i - 1;
 	while (start < end) {
-        char temp = str[start];
+        temp = str[start];
         str[start] = str[end];
         str[end] = temp;
         start++;
