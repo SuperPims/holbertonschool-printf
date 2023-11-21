@@ -35,14 +35,10 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == formats[j].charac)
 				{
-					nbrprint = formats[j].func(formatlist);
+					nbrprint += formats[j].func(formatlist);
 					i++;
 				}
 				j++;
-			}
-			if (formats[j].charac == '\0')
-			{
-				putchar('%');
 			}
 			i++;
 		}
