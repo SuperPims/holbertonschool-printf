@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 
-char *_itoa(int num, char str[], int base)
+char *_itoai(int num, char str[], int base)
 {
 	int i = 0, remaining = 0, start = 0, end = 0;
 	char temp;
@@ -54,7 +54,7 @@ int printi_int(va_list args)
 		return 0;
 	}
 
-	_itoa(intd, intstring, 10);
+	_itoai(intd, intstring, 10);
 
 	while (intstring[i] != '\0')
 	{
