@@ -22,15 +22,15 @@ char *_itoa(int num, char str[], int base)
 	}
 	str[i] = '\0';
 	end = i - 1;
-	while (start < end) {
-        temp = str[start];
-        str[start] = str[end];
-        str[end] = temp;
-        start++;
-        end--;
-    }
+	while (start < end)
+	{
+		temp = str[start];
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
+	}
 	return (str);
-
 }
 int printi_int(va_list args)
 {
@@ -61,9 +61,8 @@ int printi_int(va_list args)
 		putchar(intstring[i]);
 		i++;
 	}
-	
+
 	free(intstring);
-	
+
 	return (intlength);
 }
-
