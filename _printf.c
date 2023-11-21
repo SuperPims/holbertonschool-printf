@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 				{
 					nbrprint += formats[j].func(formatlist);
 					i++;
+					break;
 				}
 				j++;
 			}
