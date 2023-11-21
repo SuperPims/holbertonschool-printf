@@ -18,13 +18,12 @@ int _printf(const char *format, ...)
 		{'d', printd_int},
 		{'\0', NULL}};
 
-		
 	int i = 0, j = 0;
 	va_list formatlist;
 
 	if (format == NULL)
 		return (-1);
-	
+
 	va_start(formatlist, format);
 	while (format != NULL && format[i] != '\0')
 	{
@@ -33,13 +32,18 @@ int _printf(const char *format, ...)
 		{
 			while (formats[j].charac != '\0')
 			{
-				if (format[i+1] == formats[j].charac)
+				if (format[i + 1] == formats[j].charac)
 				{
 					formats[j].func(formatlist);
 					i++;
 				}
 				j++;
 			}
+			if (formats[j].charac == '\0')
+			{
+				putchar('%');
+			}
+			i++;
 		}
 		else
 		{
@@ -50,4 +54,3 @@ int _printf(const char *format, ...)
 	va_end(formatlist);
 	return (0); /*temporary*/
 }
-
