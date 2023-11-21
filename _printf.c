@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	va_list formatlist;
 
 	if (format == NULL)
-		return (0);
+		return (-1);
 	
 	va_start(formatlist, format);
 	while (format != NULL && format[i] != '\0')
@@ -49,3 +49,4 @@ int _printf(const char *format, ...)
 	va_end(formatlist);
 	return (0); /*temporary*/
 }
+
