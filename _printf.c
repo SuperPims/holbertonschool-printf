@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 		{'\0', NULL}};
 
 		
-	int i = 0, j = 0;
+	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
 
 	if (format == NULL)
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i+1] == formats[j].charac)
 				{
-					formats[j].func(formatlist);
+					nbrprint = formats[j].func(formatlist);
 					i++;
 				}
 				j++;
@@ -44,10 +44,11 @@ int _printf(const char *format, ...)
 		else
 		{
 			putchar(format[i]);
+			nbrprint++;
 		}
 		i++;
 	}
 	va_end(formatlist);
-	return (0); /*temporary*/
+	return (nbrprint);
 }
 
