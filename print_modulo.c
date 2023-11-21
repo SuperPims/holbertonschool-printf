@@ -4,6 +4,6 @@
 int print_modulo(va_list args)
 {
 	int percent = va_arg(args, int);
-	puts(percent);
-	return (sterlen(percent) + 1);
+	/*puts(percent);*/
+	return (1);
 }
