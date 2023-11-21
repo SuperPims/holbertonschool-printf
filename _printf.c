@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 				if (format[i+1] == formats[j].charac)
 				{
 					formats[j].func(formatlist);
+					i++;
 				}
 				j++;
 			}
