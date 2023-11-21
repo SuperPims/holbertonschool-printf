@@ -16,7 +16,6 @@ int printi_int(va_list args)
 		putchar('-');
 		num = -num;
 	}
-
 	temp = num;
 	while (temp != 0)
 	{
@@ -27,7 +26,7 @@ int printi_int(va_list args)
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
 	{
-		return 0;
+		return (0);
 	}
 
 	i = intlength - 1;
@@ -39,15 +38,13 @@ int printi_int(va_list args)
 	}
 	intstring[intlength] = '\0';
 
-
 	i = 0;
 	while (intstring[i] != '\0')
 	{
 		putchar(intstring[i]);
 		i++;
 	}
-
 	free(intstring);
 
-	return intlength;
+	return (intlength);
 }
