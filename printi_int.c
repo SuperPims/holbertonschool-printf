@@ -1,67 +1,54 @@
 #include "main.h"
 
-char *_itoai(int num, char str[], int base)
-{
-	int i = 0, remaining = 0, start = 0, end = 0;
-	char temp;
-
-	if (num == 0)
-	{
-		str[i] = '0';
-		i++;
-		str[i] = '\0';
-		return str;
-	}
-	while (num != 0)
-	{
-		remaining = num % base;
-		str[i] = (remaining > 9) ? (remaining - 10) + 'a' : remaining + '0';
-		i++;
-		num = num / base;
-	}
-	str[i] = '\0';
-	end = i - 1;
-	while (start < end)
-	{
-		temp = str[start];
-		str[start] = str[end];
-		str[end] = temp;
-		start++;
-		end--;
-	}
-	return (str);
-}
+/**
+ * printi_int - Print an integer
+ * @args: Argument list containing the integer to print
+ * Return: Number of characters printed
+ */
 int printi_int(va_list args)
 {
-	int intd = va_arg(args, int), temp, intlength = 0, i = 0;
-	char *intstring;
+    int num = va_arg(args, int);
+    int temp, intlength = 0, i = 0;
+    char *intstring;
 
-	if (intd < 0)
-	{
-		putchar('-');
-		intd = -intd;
-	}
-	temp = intd;
-	while (temp != 0)
-	{
-		temp = temp / 10;
-		intlength++;
-	}
-	intstring = malloc((intlength + 1) * sizeof(char));
-	if (intstring == NULL)
-	{
-		return 0;
-	}
+    if (num < 0)
+    {
+        putchar('-');
+        num = -num;
+    }
 
-	_itoai(intd, intstring, 10);
+    temp = num;
+    while (temp != 0)
+    {
+        temp = temp / 10;
+        intlength++;
+    }
 
-	while (intstring[i] != '\0')
-	{
-		putchar(intstring[i]);
-		i++;
-	}
+    intstring = malloc((intlength + 1) * sizeof(char));
+    if (intstring == NULL)
+    {
+        return 0;
+    }
 
-	free(intstring);
+    // Convert integer to string directly
+    i = intlength - 1;
+    while (num != 0)
+    {
+        intstring[i] = (num % 10) + '0';
+        num = num / 10;
+        i--;
+    }
+    intstring[intlength] = '\0';
 
-	return (intlength);
+    // Print the string
+    i = 0;
+    while (intstring[i] != '\0')
+    {
+        putchar(intstring[i]);
+        i++;
+    }
+
+    free(intstring);
+
+    return intlength;
 }
