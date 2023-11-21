@@ -7,6 +7,13 @@
 #include <string.h>
 #include <stdarg.h>
 
+/**
+ * struc formats - struct that store differents format
+ * that _printf can print and their respectives function
+ * 
+ * @charac: the char that tells wich type is to be printed
+ * @func: the function that will print the type associated
+*/
 typedef struct formats
 {
 	char charac;
