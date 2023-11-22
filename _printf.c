@@ -36,8 +36,6 @@ int _printf(const char *format, ...)
 					break;
 				}
 				j++;
-				if (j == 6)
-					_putchar('%');
 			}
 		}
 		else
