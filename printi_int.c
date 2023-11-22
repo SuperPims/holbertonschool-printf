@@ -18,35 +18,23 @@ int printi_int(va_list args)
 		minus = 1;
 		num = -num;
 	}
-	temp = num;
-	while (temp != 0)
-	{
-		temp = temp / 10;
-		intlength++;
-	}
+
+	for (int temp = num; temp != 0 && ++intlength; temp /= 10)
+		;
 
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
-	{
-		free(intstring);
-		return (0);
-	}
+		return (free(intstring), 0);
 
-	i = intlength - 1;
-	while (num != 0)
-	{
-		intstring[i] = (num % 10) + '0';
-		num = num / 10;
-		i--;
-	}
+	for (i = intlength - 1; num != 0;
+		intstring[i--] = (num % 10) + '0', num /= 10)
+		;
+
 	intstring[intlength] = '\0';
 
-	i = 0;
-	while (intstring[i] != '\0')
-	{
-		_putchar(intstring[i]);
-		i++;
-	}
+	for (i = 0; intstring[i] != '\0'; _putchar(intstring[i++]))
+		;
+
 	free(intstring);
 
 	return (intlength + minus);
