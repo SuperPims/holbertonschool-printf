@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 				j++;
-				if (formats[j].charac == '\0')
+				if (j == 6)
 					_putchar('%');
 			}
 		}
