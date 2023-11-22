@@ -62,7 +62,7 @@ This is a simplified implementation of the `printf` function in the C programmin
 To build the program, you can use a standard C compiler. For example, using `gcc`:
 
 ```bash
-gcc main.c -o _printf
+gcc *.c -o _printf
 ``````
 And then run the executable:
 ```
