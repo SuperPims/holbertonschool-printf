@@ -36,11 +36,13 @@ int _printf(const char *format, ...)
 					break;
 				}
 				j++;
+				if (formats[j].charac == '\0')
+					_putchar('%');
 			}
 		}
 		else
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 			nbrprint++;
 		}
 		i++;

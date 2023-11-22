@@ -13,7 +13,7 @@ int print_string(va_list args)
 
 	if (str == NULL)
 		return (0);
-	while (str)
+	while (str[i] != '\0')
 	{
 		_putchar(str[i++]);
 	}
