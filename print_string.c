@@ -9,9 +9,13 @@
 int print_string(va_list args)
 {
 	char *str = va_arg(args, char *);
+	int i = 0;
 
 	if (str == NULL)
 		return (0);
-	fputs(str, stdout);
+	while (str)
+	{
+		_putchar(str[i++]);
+	}
 	return (strlen(str));
 }

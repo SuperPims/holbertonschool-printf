@@ -28,5 +28,6 @@ int print_string(va_list args);
 int print_modulo(va_list args);
 int printd_int(va_list args);
 int printi_int(va_list args);
+int _putchar(char c);
 
 #endif

@@ -10,6 +10,6 @@
 int print_modulo(va_list args)
 {
 	(void)args;
-	putchar('%');
+	_putchar('%');
 	return (1);
 }

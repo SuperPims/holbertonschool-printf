@@ -14,7 +14,7 @@ int printd_int(va_list args)
 
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
 	}
 	temp = num;
@@ -43,7 +43,7 @@ int printd_int(va_list args)
 	i = 0;
 	while (intstring[i] != '\0')
 	{
-		putchar(intstring[i]);
+		_putchar(intstring[i]);
 		i++;
 	}
 	free(intstring);
