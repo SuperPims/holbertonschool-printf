@@ -1,8 +1,6 @@
 
 # Custom Printf Function
 
-![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-
 ## Overview
 
 This is a simplified implementation of the `printf` function in the C programming language. The `_printf` function allows users to print formatted output by specifying format specifiers in a manner similar to the standard `printf` function.
@@ -10,7 +8,6 @@ This is a simplified implementation of the `printf` function in the C programmin
 ## Files
 
 - **main.h**: Header file containing function declarations and a structure definition.
-- **main.c**: Source file containing the implementation of the `_printf` function and related helper functions.
 
 ## Usage
 
@@ -44,8 +41,6 @@ This is a simplified implementation of the `printf` function in the C programmin
 
 ## Functions
 
-## Functions
-
 | Function              | Description                                          |
 | :-------------------- | :--------------------------------------------------- |
 | **_printf**           | Main function that parses the format string and prints the formatted output. |
@@ -57,7 +52,7 @@ This is a simplified implementation of the `printf` function in the C programmin
 
 
 
-##Notes
+## Notes
 
 - This implementation uses a simple array of structures (`format_list`) to map format specifiers to their corresponding functions.
 - Make sure to include the correct header file and link the source file when using this implementation in your program.
@@ -67,17 +62,17 @@ This is a simplified implementation of the `printf` function in the C programmin
 To build the program, you can use a standard C compiler. For example, using `gcc`:
 
 ```bash
-gcc main.c -o my_printf
+gcc main.c -o _printf
 ``````
 And then run the executable:
 ```
-./my_printf
+./_printf
 ```
 ## Contributing
 
 If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request. Contributions are welcome!
 
-Acknowledgments
+## Acknowledgments
 
 This project draws inspiration from the standard printf function in the C Standard Library.
 
@@ -89,7 +84,7 @@ GitHub: https://github.com/TaillepierreN/holbertonschool-printf
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Holberton School - see the LICENSE file for details.
 
 ## 🔗 Links
 
