@@ -26,6 +26,7 @@ int printd_int(va_list args)
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
 	{
+		free(intstring);
 		return (0);
 	}
 
