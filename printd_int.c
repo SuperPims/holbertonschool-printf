@@ -9,12 +9,13 @@
 int printd_int(va_list args)
 {
 	int num = va_arg(args, int);
-	int temp, intlength = 0, i = 0;
+	int temp, intlength = 0, i = 0, minus = 0;
 	char *intstring;
 
 	if (num < 0)
 	{
 		_putchar('-');
+		minus = 1;
 		num = -num;
 	}
 	temp = num;
@@ -48,5 +49,5 @@ int printd_int(va_list args)
 	}
 	free(intstring);
 
-	return (intlength);
+	return (intlength + minus);
 }
