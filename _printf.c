@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
+			j += _putchar(format[i]);
 			nbrprint++;
 		}
 		i++;
