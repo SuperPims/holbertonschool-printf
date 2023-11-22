@@ -1,0 +1,104 @@
+.TH _PRINTF 1 "2023-11-20" "1.0" "Custom printf man page"
+
+.SH NAME
+\_printf \- custom printf function
+
+.SH SYNOPSIS
+.B \_printf
+\fIFORMAT\fR \fIARGUMENT\fR...
+
+.SH DESCRIPTION
+The \fB\_printf\fR function is a custom implementation of the \fBprintf\fR function, designed to print formatted output to the standard output.
+
+.SH OPTIONS
+The following conversion specifiers are supported:
+
+.TP
+\fB%c\fR
+Prints a character.
+
+.TP
+\fB%s\fR
+Prints a string.
+
+.TP
+\fB%%\fR
+Prints a percent sign.
+
+.TP
+\fB%i\fR, \fB%d\fR
+Prints a signed integer.
+
+.TP
+\fB%b\fR
+Prints an unsigned integer in binary.
+
+.SH EXAMPLES
+Print a string:
+.BR \_printf ("Hello, %s!\n", "world");
+
+Print an integer:
+.BR \_printf ("The answer is %i.\n", 42);
+
+Print an integer in binary:
+.BR \_printf ("Binary representation: %b\n", 255);
+
+.SH FUNCTIONS
+The following functions are available in the \_printf library:
+
+.TP
+\fBint print_char(va_list args)\fR
+Prints a character.
+
+.TP
+\fBint print_modulo(va_list args)\fR
+Prints a percent sign.
+
+.TP
+\fBint print_string(va_list args)\fR
+Prints a string.
+
+.TP
+\fBint printd_int(va_list args)\fR
+Prints a signed integer in decimal.
+
+.TP
+\fBint printi_int(va_list args)\fR
+Prints a signed integer in decimal.
+
+.TP
+\fBint \_printf(const char *format, ...)\fR
+Prints formatted output based on the provided format string and arguments.
+
+.SH RETURN VALUE
+The \_printf function returns the number of characters printed (excluding the null byte used to end output to strings).
+
+.SH SEE ALSO
+.BR printf
+
+.SH EXAMPLES
+To print a string:
+.BR \_printf ("Hello, %s!\n", "world");
+
+To print an integer:
+.BR \_printf ("The answer is %i.\n", 42);
+
+To print an integer in binary:
+.BR \_printf ("Binary representation: %b\n", 255);
+
+.SH AUTHOR
+Nicolas Taillepierre & Alexandre Wertel
+
+.SH BUGS
+Report bugs to  nicolas.taillepierre@holbertonstudents.com || alexandre.wertel@holbertonstudents.com.
+
+.SH VERSION
+1.0
+
+.SH DATE
+November 20, 2023
+
+.SH COPYRIGHT
+Copyright \(co 2023 Nicolas Taillepierre && Alexandre Wertel.
+.br
+This is free software: you are free to change  and redistribute it.
