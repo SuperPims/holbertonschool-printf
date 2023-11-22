@@ -19,7 +19,7 @@ int printi_int(va_list args)
 		num = -num;
 	}
 
-	for (int temp = num; temp != 0 && ++intlength; temp /= 10)
+	for (temp = num; temp != 0 && ++intlength; temp /= 10)
 		;
 
 	intstring = malloc((intlength + 1) * sizeof(char));
