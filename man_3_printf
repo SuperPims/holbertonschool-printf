@@ -1,4 +1,4 @@
-.TH _PRINTF 1 "2023-11-20" "1.0" "Custom printf man page"
+.TH _PRINTF 3 "2023-11-20" "1.0" "Custom printf man page"
 
 .SH NAME
 \_printf \- custom printf function
