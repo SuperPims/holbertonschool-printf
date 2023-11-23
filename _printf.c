@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if(format_table[j].charac == '\0')
+			if (format_table[j].charac == '\0')
 				_putchar(format[i]);
 		}
 		else
@@ -50,4 +50,5 @@ int _printf(const char *format, ...)
 	va_end(formatlist);
 	return (nbrprint);
 }
+
 
