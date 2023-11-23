@@ -21,22 +21,29 @@ int printd_int(va_list args)
 			minus = 1;
 		num = -num;
 	}
+	if (num == 0)
+	{
+		_putchar('0');
+		return 1;
+	}
 
 	for (temp = num; temp != 0 && ++intlength; temp /= 10)
 		;
 
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
-		return (free(intstring), -1);
-
+	{
+		free(intstring);
+		return (0);
+	}
 	for (i = intlength - 1; num != 0;
-	intstring[i--] = (num % 10) + '0', num /= 10)
+		 intstring[i--] = (num % 10) + '0', num /= 10)
 		;
 
 	intstring[intlength] = '\0';
 
 	for (i = 0; intstring[i] != '\0'; _putchar(intstring[i++]))
-	;
+		;
 
 	free(intstring);
 
