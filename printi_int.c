@@ -23,10 +23,9 @@ int printi_int(va_list args)
 		length++;
 		value = -value;
 	}
-	if (value == 0)
+	else
 	{
-		_putchar('0');
-		return 1;
+		value = value;
 
 		while (value / divisor > 9)
 		{
