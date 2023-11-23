@@ -8,6 +8,14 @@ This is a simplified implementation of the `printf` function in the C programmin
 ## Files
 
 - **main.h**: Header file containing function declarations and a structure definition.
+- **_printf.c**: Function file used to call the appropriate functions to print characters based on the type of inputs. Return the total number of characters printed.
+- **_putchar.c**: Utility function used to print individual characters.
+- **print_string.c**: Function handling the printing of strings of characters.
+- **print_char.c**: Function handling the printing of individual characters.
+- **printd_int.c**: Function handling the printing of decimal integers.
+- **printi_int.c**: Function handling the printing of integers.
+- **print_modulo.c**: Function handling the printing of the modulo symbol.
+
 
 ## Usage
 
@@ -68,6 +76,8 @@ And then run the executable:
 ```
 ./_printf
 ```
+## Flowchart
+![flowchart](https://github.com/TaillepierreN/holbertonschool-printf/blob/main/flowchart.png)
 ## Contributing
 
 If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request. Contributions are welcome!
