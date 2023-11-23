@@ -8,7 +8,7 @@
  */
 int printd_int(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned num = va_arg(args, int);
 	int temp, intlength = 0, minus = 0, i = 0;
 	char *intstring;
 
