@@ -42,8 +42,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			j += _putchar(format[i]);
-			nbrprint++;
+			nbrprint += _putchar(format[i]);
+			
 		}
 		i++;
 	}
