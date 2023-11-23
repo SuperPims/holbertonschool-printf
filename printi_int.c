@@ -24,21 +24,20 @@ int printi_int(va_list args)
 		value = -value;
 	}
 	else
-	{
 		value = value;
 
-		while (value / divisor > 9)
-		{
-			divisor *= 10;
-		}
-
-		while (divisor >= 1)
-		{
-			_putchar('0' + value / divisor);
-			length++;
-			value %= divisor;
-			divisor /= 10;
-		}
-
-		return (length);
+	while (value / divisor > 9)
+	{
+		divisor *= 10;
 	}
+
+	while (divisor >= 1)
+	{
+		_putchar('0' + value / divisor);
+		length++;
+		value %= divisor;
+		divisor /= 10;
+	}
+
+	return (length);
+}
