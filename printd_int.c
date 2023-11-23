@@ -33,7 +33,7 @@ int printd_int(va_list args)
 	if (intstring == NULL)
 		return (0);
 	for (i = intlength - 1; num != 0;
-		 intstring[i--] = (num % 10) + '0', num /= 10)
+		intstring[i--] = (num % 10) + '0', num /= 10)
 		;
 
 	intstring[intlength] = '\0';
