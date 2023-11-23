@@ -77,7 +77,7 @@ And then run the executable:
 ./_printf
 ```
 ## Flowchart
-![flowchart]/https://github.com/TaillepierreN/holbertonschool-printf/blob/main/flowchart.png
+![flowchart](https://github.com/TaillepierreN/holbertonschool-printf/blob/main/flowchart.png)
 ## Contributing
 
 If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request. Contributions are welcome!
