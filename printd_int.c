@@ -8,12 +8,12 @@
  */
 int printd_int(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, int);
 	int temp, intlength = 0, minus = 0, i = 0;
 	char *intstring;
 
-	if (sizeof(num) != sizeof(int))
-		return (0);
+	/*if (sizeof(num) != sizeof(int))
+		return (0);*/
 
 	if (num < 0)
 	{
@@ -26,6 +26,7 @@ int printd_int(va_list args)
 		_putchar('0');
 		return (1);
 	}
+
 	for (temp = num; temp != 0 && ++intlength; temp /= 10)
 		;
 
