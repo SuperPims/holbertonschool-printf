@@ -8,41 +8,28 @@
  */
 int printd_int(va_list args)
 {
-	int num = va_arg(args, int);
-	int temp, intlength = 0, minus = 0, i = 0;
-	char *intstring;
+	int lenght = 0;
+	int divisor = 1;
 
-	if (sizeof(num) != sizeof(int))
-		return (0);
+	int value = va_arg(args, int);
 
-	if (num < 0)
+	if (value < 0)
 	{
-		_putchar('-');
-		minus = 1;
-		num = -num;
-	}
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
+		lenght += _putchar('-');
+		value = -value;
 	}
 
-	for (temp = num; temp != 0 && ++intlength; temp /= 10)
-		;
+	while (value / divisor > 9)
+	{
+		divisor *= 10;
+	}
 
-	intstring = malloc((intlength + 1) * sizeof(char));
-	if (intstring == NULL)
-		return (0);
-	for (i = intlength - 1; num != 0;
-		intstring[i--] = (num % 10) + '0', num /= 10)
-		;
+	while (divisor >= 1)
+	{
+		lenght += _putchar('0' + value / divisor);
+		value %= divisor;
+		divisor /= 10;
+	}
 
-	intstring[intlength] = '\0';
-
-	for (i = 0; intstring[i] != '\0'; _putchar(intstring[i++]))
-		;
-
-	free(intstring);
-
-	return (intlength + minus);
+	return (lenght); // Return the number of characters printed
 }

@@ -8,39 +8,28 @@
  */
 int printi_int(va_list args)
 {
-	int num = va_arg(args, int);
-	int temp, intlength = 0, i = 0, minus = 0;
-	char *intstring;
+	int length = 0;
+	int divisor = 1;
 
-	if (num < 0)
+	int value = va_arg(args, int);
+
+	if (value < 0)
 	{
-		_putchar('-');
-		minus = 1;
-		num = -num;
-	}
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
+		length += _putchar('-');
+		value = -value;
 	}
 
-	for (temp = num; temp != 0 && ++intlength; temp /= 10)
-		;
+	while (value / divisor > 9)
+	{
+		divisor *= 10;
+	}
 
-	intstring = malloc((intlength + 1) * sizeof(char));
-	if (intstring == NULL)
-		return (free(intstring), 0);
+	while (divisor >= 1)
+	{
+		length += _putchar('0' + value / divisor);
+		value %= divisor;
+		divisor /= 10;
+	}
 
-	for (i = intlength - 1; num != 0;
-		intstring[i--] = (num % 10) + '0', num /= 10)
-		;
-
-	intstring[intlength] = '\0';
-
-	for (i = 0; intstring[i] != '\0'; _putchar(intstring[i++]))
-		;
-
-	free(intstring);
-
-	return (intlength + minus);
+	return (length);
 }
