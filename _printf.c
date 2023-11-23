@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 				j++;
 			}
 			if (format_table[j].charac == '\0')
-				_putchar(format[i]);
+				nbrprint += _putchar(format[i]);
 		}
 		else
 		{
