@@ -15,20 +15,20 @@ int printd_int(va_list args)
 	if (sizeof(num) != sizeof(int))
 		return (0);
 
-	for (temp = num; temp != 0 && ++intlength; temp /= 10)
+	if (num < 0)
 	{
-		if (num < 0)
-		{
-			_putchar('-');
-			minus = 1;
-			num = -num;
-		}
-		if (num == 0)
-		{
-			_putchar('0');
-			return (1);
-		}
+		_putchar('-');
+		minus = 1;
+		num = -num;
 	}
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	for (temp = num; temp != 0 && ++intlength; temp /= 10)
+		;
+
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
 		return (0);
