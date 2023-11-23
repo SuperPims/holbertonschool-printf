@@ -13,6 +13,10 @@ int printi_int(va_list args)
 
 	int value = va_arg(args, int);
 
+	if (value == 0)
+	{
+		return (_putchar('0'));
+	}
 	if (value < 0)
 	{
 		length += _putchar('-');
