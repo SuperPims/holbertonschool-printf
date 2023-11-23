@@ -31,5 +31,5 @@ int printd_int(va_list args)
 		divisor /= 10;
 	}
 
-	return (lenght); // Return the number of characters printed
+	return (lenght);
 }
