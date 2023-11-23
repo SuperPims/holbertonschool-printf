@@ -27,14 +27,11 @@ int printd_int(va_list args)
 	if (num == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 	intstring = malloc((intlength + 1) * sizeof(char));
 	if (intstring == NULL)
-	{
-		free(intstring);
 		return (0);
-	}
 	for (i = intlength - 1; num != 0;
 		 intstring[i--] = (num % 10) + '0', num /= 10)
 		;
