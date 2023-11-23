@@ -8,12 +8,12 @@
  */
 int printd_int(va_list args)
 {
-	unsigned int num = va_arg(args, int);
+	int num = va_arg(args, int);
 	int temp, intlength = 0, minus = 0, i = 0;
 	char *intstring;
 
-	/*if (sizeof(num) != sizeof(int))
-		return (0);*/
+	if (sizeof(num) != sizeof(int))
+		return (0);
 
 	if (num < 0)
 	{
