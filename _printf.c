@@ -22,12 +22,11 @@ int _printf(const char *format, ...)
 	if (format == NULL || format[0] == '\0')
 		return (-1);
 	va_start(formatlist, format);
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		j = 0;
 		if (format[i] == '%')
 		{
-			while (format_table[j].charac != '\0')
+			for (j = 0; format_table[j].charac != '\0'; j++)
 			{
 				if (format[i + 1] == format_table[j].charac)
 				{
@@ -35,7 +34,6 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				}
-				j++;
 			}
 			if (format_table[j].charac == '\0')
 				nbrprint += _putchar(format[i]);
@@ -43,12 +41,8 @@ int _printf(const char *format, ...)
 		else
 		{
 			nbrprint += _putchar(format[i]);
-			
 		}
-		i++;
 	}
 	va_end(formatlist);
 	return (nbrprint);
 }
-
-
