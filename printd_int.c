@@ -19,7 +19,7 @@ int printd_int(va_list args)
 	{
 		_putchar('-');
 		minus = 1;
-		num = -num;
+		num = num *-1;
 	}
 	if (num == 0)
 	{
