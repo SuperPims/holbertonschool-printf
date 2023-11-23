@@ -19,7 +19,8 @@ int printi_int(va_list args)
 	}
 	if (value < 0)
 	{
-		length += _putchar('-');
+		_putchar('-');
+		length++;
 		value = -value;
 	}
 
@@ -30,7 +31,8 @@ int printi_int(va_list args)
 
 	while (divisor >= 1)
 	{
-		length += _putchar('0' + value / divisor);
+		_putchar('0' + value / divisor);
+		length++;
 		value %= divisor;
 		divisor /= 10;
 	}
