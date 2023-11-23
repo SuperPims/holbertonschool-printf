@@ -15,7 +15,8 @@ int printd_int(va_list args)
 
 	if (value < 0)
 	{
-		lenght += _putchar('-');
+		_putchar('-');
+		lenght++;
 		value = -value;
 	}
 
@@ -26,7 +27,8 @@ int printd_int(va_list args)
 
 	while (divisor >= 1)
 	{
-		lenght += _putchar('0' + value / divisor);
+		_putchar('0' + value / divisor);
+		lenght++;
 		value %= divisor;
 		divisor /= 10;
 	}
