@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	format_list formats[] = {
+	format_list format_table[] = {
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_modulo},
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
 
-	if (format == NULL || format[0] == '\0')
+	if (format == NULL || format[0] == '\0' )
 		return (-1);
 	va_start(formatlist, format);
 	while (format[i] != '\0')
@@ -27,11 +27,11 @@ int _printf(const char *format, ...)
 		j = 0;
 		if (format[i] == '%')
 		{
-			while (formats[j].charac != '\0')
+			while (format_table[j].charac != '\0')
 			{
-				if (format[i + 1] == formats[j].charac)
+				if (format[i + 1] == format_table[j].charac)
 				{
-					nbrprint += formats[j].func(formatlist);
+					nbrprint += format_table[j].func(formatlist);
 					i++;
 					break;
 				}
