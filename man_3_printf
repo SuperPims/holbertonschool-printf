@@ -29,19 +29,12 @@ Prints a percent sign.
 \fB%i\fR, \fB%d\fR
 Prints a signed integer.
 
-.TP
-\fB%b\fR
-Prints an unsigned integer in binary.
-
 .SH EXAMPLES
 Print a string:
 .BR \_printf ("Hello, %s!\n", "world");
 
 Print an integer:
 .BR \_printf ("The answer is %i.\n", 42);
-
-Print an integer in binary:
-.BR \_printf ("Binary representation: %b\n", 255);
 
 .SH FUNCTIONS
 The following functions are available in the \_printf library:
