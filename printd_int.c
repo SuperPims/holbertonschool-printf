@@ -14,6 +14,7 @@ int printd_int(va_list args)
 
 	if(sizeof(num) != sizeof(int))
 		return(0);
+
 	if (num < 0)
 	{
 		if (_putchar('-'))
