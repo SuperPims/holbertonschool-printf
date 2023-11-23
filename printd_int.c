@@ -17,8 +17,7 @@ int printd_int(va_list args)
 
 	if (num < 0)
 	{
-		if (_putchar('-') == -1)
-		return (0);
+		if _putchar('-')
 			minus = 1;
 		num = -num;
 	}
