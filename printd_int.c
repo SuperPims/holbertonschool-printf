@@ -19,6 +19,8 @@ int printd_int(va_list args)
 		lenght++;
 		value = -value;
 	}
+	else
+		value = value;
 
 	while (value / divisor > 9)
 	{
