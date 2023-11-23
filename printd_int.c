@@ -25,7 +25,7 @@ int printd_int(va_list args)
 	if (num == 0)
 	{
 		_putchar('0');
-		return 1;
+		return (1);
 	}
 
 	for (temp = num; temp != 0 && ++intlength; temp /= 10)
