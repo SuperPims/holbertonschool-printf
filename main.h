@@ -30,6 +30,6 @@ int printd_int(va_list args);
 int printi_int(va_list args);
 int print_binary(va_list args);
 int _putchar(char c);
-void *_itoa(unsigned int num, char *str, int base);
+char *_itoa(unsigned int num, char *str, int base);
 
 #endif
