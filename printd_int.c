@@ -11,12 +11,13 @@ int printd_int(va_list args)
 	int length = 0;
 	int divisor = 1;
 
-	int value = va_arg(args, int);
+	long int value = va_arg(args, long int);
 
 	if (value == 0)
 	{
 		return (_putchar('0'));
 	}
+	
 	if (value < 0)
 	{
 		_putchar('-');
@@ -27,6 +28,8 @@ int printd_int(va_list args)
 	while (value / divisor > 9)
 	{
 		divisor *= 10;
+		
+	
 	}
 
 	while (divisor >= 1)
@@ -36,6 +39,6 @@ int printd_int(va_list args)
 		value %= divisor;
 		divisor /= 10;
 	}
-
+	
 	return (length);
 }
