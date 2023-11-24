@@ -10,6 +10,7 @@
 void *_itoa(unsigned int num, char *str, int base)
 {
 	int i = 0, remainder = 0, start = 0, end = 0;
+	char temp;
 
 	if (num == 0)
 	{
@@ -32,7 +33,7 @@ void *_itoa(unsigned int num, char *str, int base)
 	end = i - 1;
 	while (start < end)
 	{
-		char temp = str[start];
+		temp = str[start];
 		str[start] = str[end];
 		str[end] = temp;
 		start++;
