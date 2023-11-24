@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 	if (format == NULL || !format[i + 1])
 		return (-1);
 	va_start(formatlist, format);
-	while (format != NULL && format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
