@@ -8,7 +8,7 @@
  * Return: (0)
  */
 
-void *_itoa(unsigned int num, char *str, int base)
+char *_itoa(unsigned int num, char *str, int base)
 {
 	int i = 0, remainder = 0, start = 0, end = 0;
 	char temp;
@@ -17,7 +17,7 @@ void *_itoa(unsigned int num, char *str, int base)
 	{
 		str[i++] = '0';
 		str[i] = '\0';
-		return (0);
+		return str;
 	}
 
 	while (num != 0)
@@ -40,5 +40,5 @@ void *_itoa(unsigned int num, char *str, int base)
 		start++;
 		end--;
 	}
-	return (0);
+	return str;
 }
