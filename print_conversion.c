@@ -6,11 +6,11 @@
  * Return: the number of character printed
  */
 
-int print_conversion(va_list args, int base)
+int print_conversion(unsigned int value, int base)
 {
 	char *str;
 	int length = 0, i = 0;
-	unsigned int value = va_arg(args, unsigned int), temp = 0;
+	unsigned int temp = 0;
 
 	temp = value;
 
