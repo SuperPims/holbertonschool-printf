@@ -18,8 +18,6 @@ int _printf(const char *format, ...)
 		{'b', print_binary},
 		{'u', print_unsigned},
 		{'o', print_octal},
-		{'x', print_hexa_lowercase},
-		{'X', print_hexa_uppercase},
 		{'\0', NULL}};
 	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
@@ -27,11 +25,12 @@ int _printf(const char *format, ...)
 	if (format == NULL || !format[i + 1])
 		return (-1);
 	va_start(formatlist, format);
-	for (i = 0; format[i] != '\0'; i++)
+	while (format[i] != '\0')
 	{
+		j = 0;
 		if (format[i] == '%')
 		{
-			for (j = 0; format_table[j].charac != '\0'; j++)
+			while (format_table[j].charac != '\0')
 			{
 				if (format[i + 1] == format_table[j].charac)
 				{
@@ -39,12 +38,16 @@ int _printf(const char *format, ...)
 					i++;
 					break;
 				}
+				j++;
 			}
 			if (format_table[j].charac == '\0')
 				nbrprint += _putchar(format[i]);
 		}
 		else
+		{
 			nbrprint += _putchar(format[i]);
+		}
+		i++;
 	}
 	va_end(formatlist);
 	return (nbrprint);
