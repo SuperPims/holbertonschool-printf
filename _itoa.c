@@ -5,17 +5,19 @@
  * @num: integer to put in character
  * @str: string to store the characters
  * @base: base to convert to
+ * Return: (0)
  */
 
-void *_itoa(unsigned int num, char *str, int base)
+char *_itoa(unsigned int num, char *str, int base)
 {
 	int i = 0, remainder = 0, start = 0, end = 0;
+	char temp;
 
 	if (num == 0)
 	{
 		str[i++] = '0';
 		str[i] = '\0';
-		return (0);
+		return str;
 	}
 
 	while (num != 0)
@@ -32,11 +34,11 @@ void *_itoa(unsigned int num, char *str, int base)
 	end = i - 1;
 	while (start < end)
 	{
-		char temp = str[start];
+		temp = str[start];
 		str[start] = str[end];
 		str[end] = temp;
 		start++;
 		end--;
 	}
-	return (0);
+	return str;
 }

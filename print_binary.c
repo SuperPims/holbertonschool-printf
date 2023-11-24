@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_binary - print an unsigned int into binary
+ * @args: Argument list containing the unsigned int to print
+ * Return: the number of character printed
+ */
+
 int print_binary(va_list args)
 {
 	char *str;
@@ -15,13 +21,13 @@ int print_binary(va_list args)
 	}
 	str = malloc((length + 1) * sizeof(char));
 	if (str == NULL)
-		return (0);
+		return (-1);
 	_itoa(value, str, 2);
 
 	while (str[i] != '\0')
 	{
 		_putchar(str[i++]);
 	}
-
+	free(str);
 	return (length);
 }
