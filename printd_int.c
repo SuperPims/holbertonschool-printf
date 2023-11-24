@@ -37,6 +37,6 @@ int printd_int(va_list args)
 		divisor /= 10;
 	}
 
-	length += _putchar(value);
+	value += length;
 	return (length);
 }
