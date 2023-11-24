@@ -7,11 +7,7 @@ int print_binary(va_list args)
 	unsigned int value = va_arg(args, unsigned int), temp = 0;
 
 	temp = value;
-	if (value < 0)
-	{
-		length += _putchar('-');
-		value = -value;
-	}
+
 	while (temp != 0)
 	{
 		temp = temp / 10;
