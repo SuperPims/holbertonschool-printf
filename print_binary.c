@@ -8,7 +8,7 @@
 
 int print_binary(va_list args)
 {
-	unsigned int value = va_arg(args, unsigned int), temp = 0;
+	unsigned int value = va_arg(args, unsigned int);
 
 	return (print_conversion(value, 2));
 
