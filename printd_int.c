@@ -17,6 +17,7 @@ int printd_int(va_list args)
 	{
 		return (_putchar('0'));
 	}
+	
 	if (value < 0)
 	{
 		_putchar('-');
@@ -27,6 +28,8 @@ int printd_int(va_list args)
 	while (value / divisor > 9)
 	{
 		divisor *= 10;
+		
+	
 	}
 
 	while (divisor >= 1)
@@ -36,6 +39,6 @@ int printd_int(va_list args)
 		value %= divisor;
 		divisor /= 10;
 	}
-
+	
 	return (length);
 }
