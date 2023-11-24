@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{'%', print_modulo},
 		{'i', printi_int},
 		{'d', printd_int},
+		{'b', print_binary},
 		{'\0', NULL}};
 	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
