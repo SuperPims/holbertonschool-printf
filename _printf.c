@@ -16,6 +16,7 @@ int _printf(const char *format, ...)
 		{'i', printi_int},
 		{'d', printd_int},
 		{'b', print_binary},
+		{'u', print_unsigned},
 		{'\0', NULL}};
 	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
