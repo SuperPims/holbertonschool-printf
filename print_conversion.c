@@ -2,7 +2,8 @@
 
 /**
  * print_conversion - print an unsigned int
- * @args: Argument list containing the unsigned int to print
+ * @value: unsigned int to print
+ * @base: base to print into
  * Return: the number of character printed
  */
 

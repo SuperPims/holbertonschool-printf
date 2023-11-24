@@ -9,6 +9,6 @@ int print_unsigned(va_list args)
 {
 	unsigned int value = va_arg(args, unsigned int);
 
-	return(print_conversion(value, 10));
+	return (print_conversion(value, 10));
 }
 

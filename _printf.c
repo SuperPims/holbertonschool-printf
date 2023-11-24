@@ -44,9 +44,7 @@ int _printf(const char *format, ...)
 				nbrprint += _putchar(format[i]);
 		}
 		else
-		{
 			nbrprint += _putchar(format[i]);
-		}
 	}
 	va_end(formatlist);
 	return (nbrprint);

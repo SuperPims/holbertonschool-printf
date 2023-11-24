@@ -22,7 +22,6 @@ int print_hexa_uppercase(va_list args)
 	if (str == NULL)
 		return (-1);
 	_itoa(value, str, 16);
-	
 	for (j = 0; str[j] != 0; j++)
 	{
 		if (str[j] >= 'a' && str[j] <= 'z')
