@@ -17,21 +17,18 @@ int printd_int(va_list args)
 	{
 		return (_putchar('0'));
 	}
-	
 	if (value < 0)
 	{
 		_putchar('-');
 		length++;
 		value = -value;
 	}
-
 	while (value / divisor > 9)
 	{
 		divisor *= 10;
 		
 	
 	}
-
 	while (divisor >= 1)
 	{
 		_putchar('0' + value / divisor);
@@ -42,3 +39,4 @@ int printd_int(va_list args)
 	
 	return (length);
 }
+
