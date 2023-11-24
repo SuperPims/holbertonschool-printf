@@ -9,7 +9,7 @@
 
 void *_itoa(unsigned int num, char *str, int base)
 {
-	int i = 0, negative = 0, remainder = 0, start = 0, end = 0;
+	int i = 0, remainder = 0, start = 0, end = 0;
 
 	if (num == 0)
 	{
@@ -17,22 +17,16 @@ void *_itoa(unsigned int num, char *str, int base)
 		str[i] = '\0';
 		return;
 	}
-	if (num < 0 && base == 10)
-	{
-		negative = 1;
-		num = -num;
-	}
+
 	while (num != 0)
 	{
-		int remainder = num % base;
+		remainder = num % base;
 		if (remainder > 9)
 			str[i++] = (remainder - 10) + 'a';
 		else
 			str[i++] = remainder + '0';
 		num = num / base;
 	}
-	if (negative)
-		str[i++] = '-';
 	str[i] = '\0';
 
 	end = i - 1;
@@ -44,5 +38,4 @@ void *_itoa(unsigned int num, char *str, int base)
 		start++;
 		end--;
 	}
-	return;
 }
