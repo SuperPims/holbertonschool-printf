@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 		{'b', print_binary},
 		{'u', print_unsigned},
 		{'o', print_octal},
+		{'x', print_hexa_lowercase},
+		{'X', print_hexa_uppercase},
 		{'\0', NULL}};
 	int i = 0, j = 0, nbrprint = 0;
 	va_list formatlist;
