@@ -28,6 +28,6 @@ int print_binary(va_list args)
 	{
 		_putchar(str[i++]);
 	}
-
+	free(str);
 	return (length);
 }
