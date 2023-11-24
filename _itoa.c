@@ -5,6 +5,7 @@
  * @num: integer to put in character
  * @str: string to store the characters
  * @base: base to convert to
+ * Return: (0)
  */
 
 void *_itoa(unsigned int num, char *str, int base)
