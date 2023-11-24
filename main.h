@@ -30,6 +30,7 @@ int printd_int(va_list args);
 int printi_int(va_list args);
 int print_binary(va_list args);
 int print_unsigned(va_list args);
+int print_conversion(va_list args, int base);
 int _putchar(char c);
 char *_itoa(unsigned int num, char *str, int base);
 
