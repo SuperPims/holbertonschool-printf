@@ -37,5 +37,5 @@ int printi_int(va_list args)
 		divisor /= 10;
 	}
 	value += length;
-	return (length);
+	return (value);
 }

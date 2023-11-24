@@ -38,5 +38,5 @@ int printd_int(va_list args)
 	}
 
 	value += length;
-	return (length);
+	return (value);
 }
