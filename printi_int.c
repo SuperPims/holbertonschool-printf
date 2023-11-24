@@ -11,7 +11,7 @@ int printi_int(va_list args)
 	int length = 0;
 	int divisor = 1;
 
-	long int value = va_arg(args, int);
+	int value = va_arg(args, int);
 
 	if (value == 0)
 	{
@@ -37,5 +37,5 @@ int printi_int(va_list args)
 		divisor /= 10;
 	}
 
-	return (value);
+	return (length);
 }
