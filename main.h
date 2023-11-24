@@ -31,6 +31,8 @@ int printi_int(va_list args);
 int print_binary(va_list args);
 int print_unsigned(va_list args);
 int print_octal(va_list args);
+int print_hexa_lowercase(va_list args);
+int print_hexa_uppercase(va_list args);
 int print_conversion(unsigned int value, int base);
 int _putchar(char c);
 char *_itoa(unsigned int num, char *str, int base);
