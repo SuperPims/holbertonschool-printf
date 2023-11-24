@@ -7,7 +7,7 @@
  * @base: base to convert to
  */
 
-char *_itoa(unsigned int num, char *str, int base)
+void *_itoa(unsigned int num, char *str, int base)
 {
 	int i = 0, negative = 0, remainder = 0, start = 0, end = 0;
 
@@ -15,7 +15,7 @@ char *_itoa(unsigned int num, char *str, int base)
 	{
 		str[i++] = '0';
 		str[i] = '\0';
-		return str;
+		return;
 	}
 	if (num < 0 && base == 10)
 	{
@@ -44,5 +44,5 @@ char *_itoa(unsigned int num, char *str, int base)
 		start++;
 		end--;
 	}
-	return str;
+	return;
 }
